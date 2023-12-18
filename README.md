@@ -123,7 +123,8 @@ tar -zxvf checkpoints.tar.gz
 
 ## References:
 
-- SoundSketch:https://github.com/Winfredy/SoundSketch
--  VideoReTalking：https://github.com/vinthony/video-retalking
-- DAIN :https://arxiv.org/abs/1904.00830
-- PaddleGAN:https://github.com/PaddlePaddle/PaddleGAN
+- SadTalker-Video-Lip-Sync:   https://github.com/Zz-ww/SadTalker-Video-Lip-Sync
+- SADTalker:                  https://github.com/Winfredy/SADTalker
+- VideoReTalking：            https://github.com/vinthony/video-retalking
+- DAIN:                       https://arxiv.org/abs/1904.00830
+- PaddleGAN:                  https://github.com/PaddlePaddle/PaddleGAN
