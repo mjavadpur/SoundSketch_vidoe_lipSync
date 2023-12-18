@@ -10,6 +10,7 @@ from src.generate_facerender_batch import get_facerender_data
 from third_part.GFPGAN.gfpgan import GFPGANer
 from third_part.GPEN.gpen_face_enhancer import FaceEnhancement
 import warnings
+from src.utils.timer import Timer
 
 warnings.filterwarnings("ignore")
 
@@ -120,4 +121,6 @@ if __name__ == '__main__':
         args.device = "cuda"
     else:
         args.device = "cpu"
-    main(args)
+        
+    with Timer("Video Lip Sync Inference", print_= True):
+        main(args)

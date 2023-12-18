@@ -54,7 +54,7 @@ python inference.py --driven_audio <audio.wav> \
 
 
 
-## 4.合成效果(Results)
+## 4.Synthetic effects(Results)
 
 ```python
 #The synthesis effect is displayed in the ./sync_show directory:
