@@ -1,3 +1,6 @@
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mjavadpur/SoundSketch_vidoe_lipSync/blob/main/quick_demo.ipynb)
+
 # SoundSketch-Video-LipSync
 
 
