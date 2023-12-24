@@ -60,7 +60,7 @@ def enhancer(images, method='gfpgan', bg_upsampler='realesrgan'):
     model_path = os.path.join('gfpgan/weights', model_name + '.pth')
 
     if not os.path.isfile(model_path):
-        model_path = os.path.join('checkpoints', model_name + '.pth')
+        model_path = os.path.join('/content/SoundSketch_vidoe_lipSync/checkpoints/checkpoints', model_name + '.pth')
     
     if not os.path.isfile(model_path):
         # download pre-trained models from url

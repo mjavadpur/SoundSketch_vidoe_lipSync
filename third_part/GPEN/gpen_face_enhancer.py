@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import sys
-sys.path.append('third_part/GPEN')
+sys.path.append('/content/SoundSketch_vidoe_lipSync/third_part/GPEN')
 
 from face_detect.retinaface_detection import RetinaFaceDetection
 from face_parse.face_parsing import FaceParse

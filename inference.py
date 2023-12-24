@@ -56,9 +56,9 @@ def main(args):
     print(mapping_checkpoint)
     animate_from_coeff = AnimateFromCoeff(free_view_checkpoint, mapping_checkpoint, facerender_yaml_path, device)
 
-    restorer_model = GFPGANer(model_path='checkpoints/GFPGANv1.3.pth', upscale=1, arch='clean',
+    restorer_model = GFPGANer(model_path='/content/SoundSketch_vidoe_lipSync/checkpoints/GFPGANv1.3.pth', upscale=1, arch='clean',
                               channel_multiplier=2, bg_upsampler=None)
-    enhancer_model = FaceEnhancement(base_dir='checkpoints', size=512, model='GPEN-BFR-512', use_sr=False,
+    enhancer_model = FaceEnhancement(base_dir='/content/SoundSketch_vidoe_lipSync/checkpoints', size=512, model='GPEN-BFR-512', use_sr=False,
                                      sr_model='rrdb_realesrnet_psnr', channel_multiplier=2, narrow=1, device=device)
 
     # crop image and extract 3dmm from image
@@ -94,12 +94,12 @@ def main(args):
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument("--driven_audio", default='./examples/driven_audio/bus_chinese.wav',
+    parser.add_argument("--driven_audio", default='/content/SoundSketch_vidoe_lipSync/examples/driven_audio/bus_chinese.wav',
                         help="path to driven audio")
-    parser.add_argument("--source_video", default='./examples/source_image/input.mp4',
+    parser.add_argument("--source_video", default='/content/SoundSketch_vidoe_lipSync/examples/source_image/input.mp4',
                         help="path to source video")
-    parser.add_argument("--checkpoint_dir", default='./checkpoints', help="path to output")
-    parser.add_argument("--result_dir", default='./results', help="path to output")
+    parser.add_argument("--checkpoint_dir", default='/content/SoundSketch_vidoe_lipSync/checkpoints', help="path to output")
+    parser.add_argument("--result_dir", default='/content/SoundSketch_vidoe_lipSync/results', help="path to output")
     parser.add_argument("--batch_size", type=int, default=1, help="the batch size of facerender")
     parser.add_argument("--enhancer", type=str, default='lip', help="enhaner region:[none,lip,face] \
                                                                       none:do not enhance; \
@@ -109,7 +109,7 @@ if __name__ == '__main__':
 
     parser.add_argument("--use_DAIN", dest="use_DAIN", action="store_true",
                         help="Depth-Aware Video Frame Interpolation")
-    parser.add_argument('--DAIN_weight', type=str, default='./checkpoints/DAIN_weight',
+    parser.add_argument('--DAIN_weight', type=str, default='/content/SoundSketch_vidoe_lipSync/checkpoints/DAIN_weight',
                         help='Path to model weight')
     parser.add_argument('--dian_output', type=str, default='dian_output', help='output dir')
     parser.add_argument('--time_step', type=float, default=0.5, help='choose the time steps')
