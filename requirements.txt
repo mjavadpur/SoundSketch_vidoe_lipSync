@@ -18,3 +18,5 @@ facexlib==0.2.5
 gradio
 gfpgan
 dlib-bin
+ffmpeg-python
+realesrgan
